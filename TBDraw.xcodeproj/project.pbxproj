@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B1B4A4619AC6294002FF789 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B4A4519AC6294002FF789 /* HomeTableViewCell.m */; };
+		4B1B4A4C19AC6AA1002FF789 /* HRCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B4A4B19AC6AA1002FF789 /* HRCell.m */; };
+		4B1B4A4F19AC6B11002FF789 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B4A4E19AC6B11002FF789 /* HomeModel.m */; };
 		4BAE739219A73A2C00BE2D01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAE739119A73A2C00BE2D01 /* Foundation.framework */; };
 		4BAE739419A73A2C00BE2D01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAE739319A73A2C00BE2D01 /* CoreGraphics.framework */; };
 		4BAE739619A73A2C00BE2D01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAE739519A73A2C00BE2D01 /* UIKit.framework */; };
@@ -37,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B1B4A4419AC6294002FF789 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		4B1B4A4519AC6294002FF789 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		4B1B4A4A19AC6AA1002FF789 /* HRCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRCell.h; sourceTree = "<group>"; };
+		4B1B4A4B19AC6AA1002FF789 /* HRCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRCell.m; sourceTree = "<group>"; };
+		4B1B4A4D19AC6B11002FF789 /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
+		4B1B4A4E19AC6B11002FF789 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
 		4BAE738E19A73A2C00BE2D01 /* TBDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BAE739119A73A2C00BE2D01 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BAE739319A73A2C00BE2D01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -92,6 +101,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B1B4A4119AC6280002FF789 /* control */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = control;
+			sourceTree = "<group>";
+		};
+		4B1B4A4219AC6281002FF789 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4B1B4A4D19AC6B11002FF789 /* HomeModel.h */,
+				4B1B4A4E19AC6B11002FF789 /* HomeModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4B1B4A4319AC6281002FF789 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4B1B4A4A19AC6AA1002FF789 /* HRCell.h */,
+				4B1B4A4B19AC6AA1002FF789 /* HRCell.m */,
+				4B1B4A4419AC6294002FF789 /* HomeTableViewCell.h */,
+				4B1B4A4519AC6294002FF789 /* HomeTableViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		4BAE738519A73A2C00BE2D01 = {
 			isa = PBXGroup;
 			children = (
@@ -178,19 +214,12 @@
 		4BAE73CA19A73FF900BE2D01 /* HomeController */ = {
 			isa = PBXGroup;
 			children = (
-				4BAE73CB19A73FF900BE2D01 /* control */,
+				4B1B4A4119AC6280002FF789 /* control */,
 				4BAE73CC19A73FF900BE2D01 /* controller */,
-				4BAE73CD19A73FF900BE2D01 /* model */,
-				4BAE73CE19A73FF900BE2D01 /* view */,
+				4B1B4A4219AC6281002FF789 /* model */,
+				4B1B4A4319AC6281002FF789 /* view */,
 			);
 			path = HomeController;
-			sourceTree = "<group>";
-		};
-		4BAE73CB19A73FF900BE2D01 /* control */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = control;
 			sourceTree = "<group>";
 		};
 		4BAE73CC19A73FF900BE2D01 /* controller */ = {
@@ -200,20 +229,6 @@
 				4BAE73DF19A7409100BE2D01 /* HomeViewController.m */,
 			);
 			path = controller;
-			sourceTree = "<group>";
-		};
-		4BAE73CD19A73FF900BE2D01 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		4BAE73CE19A73FF900BE2D01 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		4BAE73CF19A7405B00BE2D01 /* FourthController */ = {
@@ -471,10 +486,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B1B4A4F19AC6B11002FF789 /* HomeModel.m in Sources */,
 				4BAE73E919A740B400BE2D01 /* FourthViewController.m in Sources */,
 				4BAE73E319A740A100BE2D01 /* SecondViewController.m in Sources */,
+				4B1B4A4619AC6294002FF789 /* HomeTableViewCell.m in Sources */,
 				4BAE73E619A740A900BE2D01 /* ThirdViewController.m in Sources */,
 				4BAE73A219A73A2C00BE2D01 /* AppDelegate.m in Sources */,
+				4B1B4A4C19AC6AA1002FF789 /* HRCell.m in Sources */,
 				4BAE739E19A73A2C00BE2D01 /* main.m in Sources */,
 				4BAE73E019A7409100BE2D01 /* HomeViewController.m in Sources */,
 				4BAE740719A74CDD00BE2D01 /* TBTabBarController.m in Sources */,
@@ -676,6 +694,7 @@
 				4BAE73C519A73A2C00BE2D01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4BAE73C619A73A2C00BE2D01 /* Build configuration list for PBXNativeTarget "TBDrawTests" */ = {
 			isa = XCConfigurationList;
@@ -684,6 +703,7 @@
 				4BAE73C819A73A2C00BE2D01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
