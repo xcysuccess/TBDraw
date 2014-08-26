@@ -15,13 +15,19 @@
 
 static UIFont *NameFont;
 static UIFont *DetailFont;
+static CGRect titleRect;
+static CGRect contentRect;
+static CGRect imageRect;
 
 @implementation HomeTableViewCell
 
 + (void)initialize
 {
-    NameFont =   [UIFont systemFontOfSize : rNameFontSize];
-    DetailFont = [UIFont systemFontOfSize : rDetailFontSize];
+    NameFont   =   [UIFont systemFontOfSize : rNameFontSize];
+    DetailFont =   [UIFont systemFontOfSize : rDetailFontSize];
+    titleRect  =   CGRectMake(75, 10, 200, 30);
+    contentRect   =   CGRectMake(75, 40, 200, 20);
+    imageRect     =    CGRectMake(5, 5, 60, 60);
 //    DetailFont = [UIFont fontWithName:@"American Typewriter" size:rDetailFontSize];
 }
 
@@ -41,6 +47,21 @@ static UIFont *DetailFont;
     }
     
     [self setNeedsDisplay];
+}
+
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    
+    UITouch *touch =  [touches anyObject];
+
+    if(touch.tapCount == 1)
+    {
+        CGPoint currentLocation = [touch locationInView:self];
+
+        if (CGRectContainsPoint(imageRect, currentLocation)) {
+            mAlertView(@"点中了image", @"imageRect");
+        }
+    }
 }
 
 - (void)drawContentView:(CGRect)rect
@@ -65,7 +86,7 @@ static UIFont *DetailFont;
     }
     
     UIImage *image = [UIImage imageNamed:_imageHeader];
-    [image drawInRect:CGRectMake(5, 5, 60, 60)];
+    [image drawInRect:imageRect];
     
     [nameColor set];
     
@@ -78,7 +99,7 @@ static UIFont *DetailFont;
     NSDictionary *attributesTitle = @{ NSFontAttributeName: NameFont,
                                   NSParagraphStyleAttributeName: paragraphStyle };
     
-    [_title drawInRect: CGRectMake(75, 10, 200, 30)
+    [_title drawInRect : titleRect
            withAttributes: attributesTitle];
 
     
@@ -86,7 +107,7 @@ static UIFont *DetailFont;
     NSDictionary *attributesContent = @{ NSFontAttributeName: DetailFont,
                                        NSParagraphStyleAttributeName: paragraphStyle };
 
-    [_content drawInRect: CGRectMake(75, 40, 200, 20)
+    [_content drawInRect:contentRect
         withAttributes: attributesContent];
 }
 
