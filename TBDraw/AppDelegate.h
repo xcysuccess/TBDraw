@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TBTabBarController.h"
-
+#import "TBECSlidingViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-{
-    TBTabBarController* tabBarViewController;
-}
+
+@property (nonatomic, strong) TBECSlidingViewController *slidingViewController;
 @property (strong, nonatomic) UIWindow *window;
+
 
 @end

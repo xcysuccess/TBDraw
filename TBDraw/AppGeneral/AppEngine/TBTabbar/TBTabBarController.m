@@ -11,6 +11,7 @@
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
 #import "FourthViewController.h"
+#import "AppDelegate.h"
 
 @interface TBTabBarController ()
 
@@ -40,7 +41,7 @@
 {
     
     HomeViewController   * first  = [[HomeViewController alloc]   init];
-    UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:first];
+    UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:first];    
     
     SecondViewController * second = [[SecondViewController alloc] init];
     UINavigationController *secondNav = [[UINavigationController alloc] initWithRootViewController:second];

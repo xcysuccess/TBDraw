@@ -1,18 +1,18 @@
 //
-//  ThirdViewController.m
+//  TBECSlidingViewController.m
 //  TBDraw
 //
-//  Created by xiangchenyu on 14-8-22.
+//  Created by XiangChenyu on 14-8-28.
 //  Copyright (c) 2014年 com.alibaba-inc. All rights reserved.
 //
 
-#import "ThirdViewController.h"
+#import "TBECSlidingViewController.h"
 
-@interface ThirdViewController ()
+@interface TBECSlidingViewController ()
 
 @end
 
-@implementation ThirdViewController
+@implementation TBECSlidingViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,16 +26,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self initViews];
     // Do any additional setup after loading the view.
 }
 
-- (void) initViews
+-(void) initViews
 {
-    self.view.backgroundColor = [UIColor whiteColor];
+    //configure anchored layout
+    self.anchorRightPeekAmount  = 100.0;
+    self.anchorLeftRevealAmount = 250.0;
+    
+    self.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
+    //self.slidingViewController.customAnchoredGestures = @[];
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

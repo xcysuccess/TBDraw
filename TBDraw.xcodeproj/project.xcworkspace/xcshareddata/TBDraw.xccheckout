@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>BCAD77FF-762B-4956-8759-A7D8BDAD5729</string>
+	<string>E1595847-9EAD-4695-8078-13EAE8D63ABB</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TBDraw</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>08F60592-E49E-4BDF-85F1-B0ED2D2B99C1</key>
+		<key>EA08493C-89C5-46CA-8F8E-D60011C084DF</key>
 		<string>https://github.com/xcysucess/TBDraw.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TBDraw.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>08F60592-E49E-4BDF-85F1-B0ED2D2B99C1</key>
+		<key>EA08493C-89C5-46CA-8F8E-D60011C084DF</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>08F60592-E49E-4BDF-85F1-B0ED2D2B99C1</string>
+	<string>EA08493C-89C5-46CA-8F8E-D60011C084DF</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>08F60592-E49E-4BDF-85F1-B0ED2D2B99C1</string>
+			<string>EA08493C-89C5-46CA-8F8E-D60011C084DF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TBDraw</string>
 		</dict>

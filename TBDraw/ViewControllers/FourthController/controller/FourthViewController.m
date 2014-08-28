@@ -26,7 +26,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self initViews];
     // Do any additional setup after loading the view.
+}
+
+- (void) initViews
+{
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning

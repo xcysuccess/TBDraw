@@ -7,23 +7,32 @@
 //
 
 #import "AppDelegate.h"
+#import "TBTabBarController.h"
+#import "LeftFaceController.h"
 
+@interface AppDelegate()
+
+
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
     
-    tabBarViewController = [[TBTabBarController alloc]init];
-    [self.window setRootViewController:tabBarViewController];
+    TBTabBarController * tabBarController  = [[TBTabBarController alloc]init];
+    LeftFaceController *underLeftViewController  = [[LeftFaceController alloc] init];
+    
+    self.slidingViewController = [TBECSlidingViewController slidingWithTopViewController:tabBarController];
+    self.slidingViewController.underLeftViewController  = underLeftViewController;
+    
+    self.window.rootViewController = self.slidingViewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

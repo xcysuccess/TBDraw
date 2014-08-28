@@ -1,18 +1,20 @@
 //
-//  ThirdViewController.m
+//  TheDrawingController.m
 //  TBDraw
 //
-//  Created by xiangchenyu on 14-8-22.
+//  Created by XiangChenyu on 14-8-27.
 //  Copyright (c) 2014年 com.alibaba-inc. All rights reserved.
 //
 
-#import "ThirdViewController.h"
+#import "TheDrawingController.h"
+#import "TheDrawingScrollView.h"
+#import "TheDrawingPaintView.h"
 
-@interface ThirdViewController ()
+@interface TheDrawingController ()
 
 @end
 
-@implementation ThirdViewController
+@implementation TheDrawingController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,16 +28,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self initViews];
     // Do any additional setup after loading the view.
 }
 
 - (void) initViews
 {
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
-}
 
+    
+    TheDrawingScrollView *zeroScrollView = [[TheDrawingScrollView alloc] initWithFrame:
+                                      CGRectMake(0, self.view.frame.size.height - 64 - TheDrawingScrollViewHeight, self.view.bounds.size.width, TheDrawingScrollViewHeight)];
+    [self.view addSubview:zeroScrollView];
+    
+    TheDrawingPaintView *zeroPaintView = [[TheDrawingPaintView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, zeroScrollView.frame.origin.y)];
+    [self.view addSubview:zeroPaintView];
+//    [self.view.layer addSublayer:zeroPaintView.layer];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
