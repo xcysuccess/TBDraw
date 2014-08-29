@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "TBTabBarController.h"
 #import "LeftFaceController.h"
+//#import "MacroDefine.h"
 
 @interface AppDelegate()
 
@@ -29,6 +30,7 @@
     self.slidingViewController.underLeftViewController  = underLeftViewController;
     
     self.window.rootViewController = self.slidingViewController;
+
     [self.window makeKeyAndVisible];
     return YES;
 }

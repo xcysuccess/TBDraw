@@ -36,9 +36,25 @@
     return self;
 }
 
+-(void) navigationBarCustomStyle
+{
+    [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]]; //mRGBColor(0x06,0x7A,0xB5)
+    //    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_bg.png"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+    shadow.shadowOffset = CGSizeMake(0, 1);
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+}
 
 - (void) initViews
 {
+    [self navigationBarCustomStyle];
     
     HomeViewController   * first  = [[HomeViewController alloc]   init];
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:first];    
@@ -65,6 +81,17 @@
     UIImage *mapImageSel = [UIImage imageNamed:@"maps_selected.png"];
     mapImage = [mapImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     mapImageSel = [mapImageSel imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    UIImage *myImage = [UIImage imageNamed:@"tab_icon_my"];
+    UIImage *myImageSel = [UIImage imageNamed:@"tab_icon_my_selected"];
+    myImage = [myImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    myImageSel = [myImageSel imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    UIImage *sendImage = [UIImage imageNamed:@"setting_icon"];
+    UIImage *sendImageSel = [UIImage imageNamed:@"settings_selected"];
+    sendImage = [sendImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    sendImageSel = [sendImageSel imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     //-------End--------
     
     first.title  = @"首页";
@@ -81,12 +108,12 @@
                                                  selectedImage:mapImageSel];
     
     thirdNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"third"
-                                                        image:mapImage
-                                                selectedImage:mapImageSel];
+                                                        image:myImage
+                                                selectedImage:myImageSel];
     
     fourthNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"fourth"
-                                                         image:mapImage
-                                                 selectedImage:mapImageSel];
+                                                         image:sendImage
+                                                 selectedImage:sendImageSel];
     
     
     //---------设置tabbar的外观属性------------

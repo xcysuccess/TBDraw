@@ -79,6 +79,7 @@ static NSString * cellIdentifier = @"HomeTableViewCell";
     [self initViews];
 
 }
+
 - (void) initViews
 {
 //    self.edgesForExtendedLayout = UIRectEdgeNone;

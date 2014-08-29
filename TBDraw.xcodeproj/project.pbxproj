@@ -13,6 +13,8 @@
 		4B1B4A4619AC6294002FF789 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B4A4519AC6294002FF789 /* HomeTableViewCell.m */; };
 		4B1B4A4C19AC6AA1002FF789 /* HRCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B4A4B19AC6AA1002FF789 /* HRCell.m */; };
 		4B1B4A4F19AC6B11002FF789 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B4A4E19AC6B11002FF789 /* HomeModel.m */; };
+		4B64426119B02DCB002F0672 /* UIButton+TBNavBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B64426019B02DCB002F0672 /* UIButton+TBNavBackButton.m */; };
+		4B64426519B03063002F0672 /* UIBarButtonItem+TBBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B64426419B03063002F0672 /* UIBarButtonItem+TBBarButtonItem.m */; };
 		4BAE739219A73A2C00BE2D01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAE739119A73A2C00BE2D01 /* Foundation.framework */; };
 		4BAE739419A73A2C00BE2D01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAE739319A73A2C00BE2D01 /* CoreGraphics.framework */; };
 		4BAE739619A73A2C00BE2D01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAE739519A73A2C00BE2D01 /* UIKit.framework */; };
@@ -63,6 +65,10 @@
 		4B1B4A4B19AC6AA1002FF789 /* HRCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRCell.m; sourceTree = "<group>"; };
 		4B1B4A4D19AC6B11002FF789 /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
 		4B1B4A4E19AC6B11002FF789 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
+		4B64425F19B02DCB002F0672 /* UIButton+TBNavBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TBNavBackButton.h"; sourceTree = "<group>"; };
+		4B64426019B02DCB002F0672 /* UIButton+TBNavBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TBNavBackButton.m"; sourceTree = "<group>"; };
+		4B64426319B03063002F0672 /* UIBarButtonItem+TBBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+TBBarButtonItem.h"; sourceTree = "<group>"; };
+		4B64426419B03063002F0672 /* UIBarButtonItem+TBBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+TBBarButtonItem.m"; sourceTree = "<group>"; };
 		4BAE738E19A73A2C00BE2D01 /* TBDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BAE739119A73A2C00BE2D01 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BAE739319A73A2C00BE2D01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -205,6 +211,24 @@
 				4B1B4A4519AC6294002FF789 /* HomeTableViewCell.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		4B64425E19B02DB9002F0672 /* TBNavBackButton */ = {
+			isa = PBXGroup;
+			children = (
+				4B64425F19B02DCB002F0672 /* UIButton+TBNavBackButton.h */,
+				4B64426019B02DCB002F0672 /* UIButton+TBNavBackButton.m */,
+			);
+			path = TBNavBackButton;
+			sourceTree = "<group>";
+		};
+		4B64426219B03047002F0672 /* TBNavBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				4B64426319B03063002F0672 /* UIBarButtonItem+TBBarButtonItem.h */,
+				4B64426419B03063002F0672 /* UIBarButtonItem+TBBarButtonItem.m */,
+			);
+			path = TBNavBarItem;
 			sourceTree = "<group>";
 		};
 		4BAE738519A73A2C00BE2D01 = {
@@ -458,6 +482,8 @@
 		4BAE740319A74CBD00BE2D01 /* AppEngine */ = {
 			isa = PBXGroup;
 			children = (
+				4B64426219B03047002F0672 /* TBNavBarItem */,
+				4B64425E19B02DB9002F0672 /* TBNavBackButton */,
 				4BF3594B19AF32F600E27385 /* TBECSlidingViewController */,
 				4BAE740419A74CDD00BE2D01 /* TBTabbar */,
 			);
@@ -647,6 +673,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B64426119B02DCB002F0672 /* UIButton+TBNavBackButton.m in Sources */,
+				4B64426519B03063002F0672 /* UIBarButtonItem+TBBarButtonItem.m in Sources */,
 				4BF3594719AF1CA900E27385 /* ECSlidingInteractiveTransition.m in Sources */,
 				4B17893419ADE66A006A2163 /* TheDrawingPaintView.m in Sources */,
 				4BF3594A19AF1CA900E27385 /* UIViewController+ECSlidingViewController.m in Sources */,

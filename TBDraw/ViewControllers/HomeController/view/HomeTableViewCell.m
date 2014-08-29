@@ -74,16 +74,16 @@ static CGRect imageRect;
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGRect cellRect = self.frame;
     
-    if (self.highlighted || self.selected)
-    {
-        CGContextSetFillColorWithColor(context, [UIColor lightGrayColor].CGColor);
-        CGContextFillRect(context, CGRectMake(0, 0, cellRect.size.width, cellRect.size.height));
-    }
-    else
-    {
+//    if (self.highlighted || self.selected)
+//    {
+//        CGContextSetFillColorWithColor(context, [UIColor lightGrayColor].CGColor);
+//        CGContextFillRect(context, CGRectMake(0, 0, cellRect.size.width, cellRect.size.height));
+//    }
+//    else
+//    {
         CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
         CGContextFillRect(context, CGRectMake(0, 0, cellRect.size.width, cellRect.size.height));
-    }
+//    }
     
     UIImage *image = [UIImage imageNamed:_imageHeader];
     [image drawInRect:imageRect];

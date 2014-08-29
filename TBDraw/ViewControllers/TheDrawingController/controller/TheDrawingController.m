@@ -34,6 +34,8 @@
 
 - (void) initViews
 {
+    [self.navigationItem dgbBackButtonItemStyle];
+
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
 
